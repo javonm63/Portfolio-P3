@@ -1,0 +1,25 @@
+.bookCard-main-container {
+    border: 2px solid;
+    width: 100%;
+    background-color: rgba(146, 146, 146, 0.494);
+    background-size: cover;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.377);
+    font-weight: bold;
+}
+.bookCard-main-container:hover {
+    scale: 1.03;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.266);
+}
+
+@media screen and (max-width: 1030px) {
+    .bookCard-main-container {
+        height: 50vh;
+    }
+}
+@media screen and (max-width: 720px) {
+    .bookCard-main-container {
+        height: 70vh;
+    }
+}

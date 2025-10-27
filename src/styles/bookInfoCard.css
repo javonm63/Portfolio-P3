@@ -1,0 +1,22 @@
+.bookInfoCard-main-container {
+    position: fixed;
+    border-radius: 5px;
+    padding: 1%;
+    width: 50%;
+    height: 60vh;
+    left: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.626);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.472);
+}
+
+@media screen and (max-width: 720px) {
+    .bookInfoCard-main-container {
+        width: 75%;
+        height: 80vh;
+        left: 20.2%;
+    }
+}

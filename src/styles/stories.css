@@ -1,0 +1,86 @@
+.stories-page-container {
+    margin-top: 10px;
+    width: 81.5%;
+    height: 88vh;
+    overflow-x: scroll;
+}
+.stories-all-container {
+    height: 100vh;
+    opacity: 0;
+    width: 100%;
+    /* height: fit-content; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
+    animation-name: homeVidsIntro;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+.stories-history-container {
+    height: 100vh;
+    opacity: 0;
+    width: 100%;
+    /* height: fit-content; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
+    animation-name: homeVidsIntro;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+.stories-mystery-container {
+    height: 100vh;
+    opacity: 0;
+    width: 100%;
+    /* height: fit-content; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
+    animation-name: homeVidsIntro;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+.stories-cooking-container {
+    height: 100vh;
+    opacity: 0;
+    width: 100%;
+    /* height: fit-content; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
+    animation-name: homeVidsIntro;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+@media screen and (max-width: 1030px) {
+    .stories-all-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .stories-history-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .stories-mystery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .stories-cooking-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 720px) {
+    .stories-all-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .stories-history-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .stories-mystery-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .stories-cooking-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

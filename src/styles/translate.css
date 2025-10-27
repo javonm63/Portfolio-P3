@@ -1,0 +1,71 @@
+.translate-main-container {
+    width: 100%;
+    height: 87.5vh;
+    padding: 1%;
+    overflow-x: scroll;
+}
+.pictureGrid-container {
+    height: 100%;
+    opacity: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
+    animation-name: homeVidsIntro;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+.t-picture-container {
+    font-size: 40px;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-size: cover;
+    border: none;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.516);
+    background-color: rgba(250, 235, 215, 0.614);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.678);
+}
+.t-picture-container:hover {
+    scale: 1.025;
+    cursor: pointer;
+    color: black;
+    background-color: rgba(255, 209, 150, 0.766);
+    box-shadow: 0px 0px 5px rgba(163, 163, 163, 0.362);
+}
+.pictureGrid2-container {
+    height: 100%;
+    opacity: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
+    animation-name: homeVidsIntro;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@media screen and (max-width: 1030px) {
+    .pictureGrid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pictureGrid2-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .t-picture-container {
+        height: 30vh;
+    }
+}
+@media screen and (max-width: 720px) {
+    .pictureGrid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .pictureGrid2-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .t-picture-container {
+        height: 40vh;
+    }
+}

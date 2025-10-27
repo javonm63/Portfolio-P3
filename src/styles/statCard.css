@@ -1,0 +1,30 @@
+.statCard-main-container {
+    border-radius: 5px;
+    width: 45%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 192, 203, 0.328);
+}
+.statCard-main-container:hover {
+    scale: 1.05;
+}
+.stat-icon {
+    width: 50px;
+    height: 50px;
+}
+.myL-stat {
+    margin: 0;
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(149, 75, 88, 0.932);
+}
+.myL-stat-title {
+    margin: 0;
+    font-weight: bold;
+    color: rgba(149, 75, 88, 0.932);
+}

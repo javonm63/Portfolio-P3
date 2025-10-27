@@ -1,0 +1,295 @@
+.myList-main-container {
+    width: 100%;
+    height: 89.25vh;
+    display: flex;
+    align-items: center;
+    gap: 4%;
+    background-image: url('/todo-backgrnd.jpg');
+    background-size: cover;
+}
+.myList-todo-container {
+    width: 58%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 4%;
+}
+.myList-aside-container {
+    width: 38%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 4%;
+}
+.myL-page-title {
+    padding: 5px;
+    border-radius: 5px;
+    border: 3px solid rgba(0, 0, 0, 0.155);
+    background-color: rgba(128, 128, 128, 0.426);
+    backdrop-filter: blur(5px);
+    font-size: 30px;
+    margin: 10px;
+    color: rgba(94, 1, 55, 0.515);
+}
+.todo-input-container {
+    width: 97%;
+    height: 30%;
+    margin-bottom: 10%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid rgba(0, 0, 0, 0.155);
+    background-color: rgba(128, 128, 128, 0.598);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 5px 5px rgba(15, 0, 12, 0.687);
+}
+.todo-input-sub-container {
+    width: 82%;
+    padding: 4%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(220, 220, 220);
+}
+.todo-inputs-flexbox {
+    display: flex;
+    align-items: center;
+    gap: 4%;
+}
+.todo-inputs {
+    width: 50%;
+    border: none;
+    outline: none;
+    height: 25px;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.614);
+    background-color: rgba(173, 171, 171, 0.829);
+}
+.todo-inputs:hover {
+    scale: 1.05;
+    background-color: rgb(196, 195, 195);
+}
+.task-dueDate-label {
+    margin: 0;
+    margin-top: 10px;
+    opacity: 65%;
+}
+.add-task-button {
+    margin-top: 10px;
+    width: 25%;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(74, 74, 74, 0.471);
+}
+.add-task-button:hover { 
+    cursor: pointer;
+    color: white;
+    scale: 1.05;
+    background-color: rgba(183, 0, 216, 0.471);
+}
+.todo-list-container {
+    width: 97%;
+    height: 30%;
+    margin-bottom: 5%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid rgba(0, 0, 0, 0.155);
+    background-color: rgba(128, 128, 128, 0.598);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 5px 5px rgba(15, 0, 12, 0.687);
+}
+.todo-list-tasks-cont {
+    width: 100%;
+    height: 80%;
+    margin: 0;
+    overflow-x: scroll;
+}
+.task-div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.task-border {
+    border: 2px solid rgba(0, 0, 0, 0.192);
+}
+.task {
+    border-radius: 5px;
+    width: 82%;
+    padding: 4%;
+    margin: 0;
+    margin-bottom: 10px;
+    list-style: none;
+    background-color: rgba(212, 212, 212, 0.528);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.543);
+}
+.task:hover {
+    scale: 1.05;
+    z-index: 9999;
+}
+.task-action-btns {
+    border: none;
+    border-radius: 5px;
+    margin: 2.5px;
+    color: rgba(255, 255, 255, 0.309);
+    background-color: rgba(128, 128, 128, 0.427);
+}
+.task-action-btns:hover {
+    font-weight: bold;
+    scale: 1.075;
+    color: white;
+    background-color: pink;
+    cursor: pointer;
+}
+.task-title {
+    margin: 0;
+}
+.task-descript {
+    margin: 0;
+    margin-top: 5px;
+}
+.todo-bottom-card {
+    width: 97%;
+    height: 10%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid rgba(0, 0, 0, 0.155);
+    background-color: rgba(128, 128, 128, 0.598);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 5px 5px rgba(15, 0, 12, 0.687);
+}
+.todo-quote-of-the-day {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.579);
+}
+.myList-yourProgress-cont {
+    width: 99%;
+    height: 30%;
+    margin-top: 30%;
+    margin-bottom: 10%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border: 3px solid rgba(0, 0, 0, 0.155);
+    background-color: rgba(128, 128, 128, 0.598);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 5px 5px rgba(15, 0, 12, 0.687);
+}
+.myList-stat-cont {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.myList-yourStats-cont {
+    width: 99%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 5px;
+    border: 3px solid rgba(0, 0, 0, 0.155);
+    background-color: rgba(128, 128, 128, 0.598);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 5px 5px rgba(15, 0, 12, 0.687);
+}
+.myList-parent-todos-cont {
+    width: 99%;
+    height: 30%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border: 3px solid rgba(0, 0, 0, 0.155);
+    background-color: rgba(128, 128, 128, 0.598);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 5px 5px rgba(15, 0, 12, 0.687);
+}
+.myList-aside-titles {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 7.5px;
+    margin-bottom: 5px;
+    color: rgba(0, 0, 0, 0.616);
+}
+.myList-parent-todo-placeholder {
+    font-size: 25px;
+    margin-top: 13%;
+    color: rgba(255, 255, 255, 0.64);
+}
+
+@media screen and (max-width: 1030px) {
+    .todo-list-container {
+        height: 37.5%;
+    }
+    .myL-page-title {
+        font-size: 25px;
+    }
+    .myList-parent-todo-placeholder {
+        margin-top: 15%;
+    }
+    /* .todo-inputs {
+        width: 46%;
+    } */
+}
+@media screen and (max-width: 720px) {
+    .myList-main-container {
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+    }
+    .myList-todo-container {
+        width: 100%;
+        height: 90vh;
+        margin-left: 0;
+    }
+    .myList-aside-container {
+        width: 100%;
+        height: 90vh;
+    }
+    .todo-input-container {
+        width: 90%;
+    }
+    .todo-list-container {
+        width: 90%;
+    }
+    .todo-bottom-card {
+        width: 90%;
+        height: 17%;
+    }
+    .myList-aside-container {
+        margin-right: 0;
+        margin-top: 5%;
+        width: 98%;
+        border-top: 10px solid rgba(255, 192, 203, 0.648);
+    }
+    .myList-yourProgress-cont {
+        width: 90%;
+        height: 30%;
+        margin-top: 10%;
+    }
+    .myList-yourStats-cont {
+        width: 90%;
+        height: 15%;
+    }
+    .myList-parent-todos-cont {
+        width: 90%;
+        height: 30%;
+    }
+}

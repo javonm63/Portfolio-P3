@@ -1,0 +1,38 @@
+.intro-logo-container {
+    position: fixed;
+    top: 40%;
+    width: 20vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%) scale(1);
+    background-color: rgb(142, 142, 142);
+    animation-name: appIntro;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+}
+.intro-logo {
+    font-size: 32.5px;
+    font-weight: bold;
+    color: rgb(169, 54, 0);
+}
+@keyframes appIntro {
+    0%{
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 1;
+    }
+    50% {
+        opacity: 50%;
+    }
+    75%{
+        transform: rotate(0deg);
+    }
+    100%{
+        border-radius: 50%;
+        display: none;
+        opacity: 0;
+        transform: rotate(360deg);
+        transform: translate(-50%, -50%) scale(1);
+    }
+}

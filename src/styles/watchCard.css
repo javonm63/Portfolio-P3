@@ -1,0 +1,56 @@
+.watchCard-main-container {
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.826);
+    padding-top: 5px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.686);
+}
+.video-player {
+    width: 99%;
+    height: 75vh;
+    border: none;
+    border-radius: 10px;
+}
+.video-info-card {
+    width: 100%;
+}
+.watch-video-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.681);
+}
+.video-sub-container {
+    width: 98.5%;
+    height: fit-content
+}
+.video-descript {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 18px;
+    margin-bottom: 5px;
+    color: rgba(0, 0, 0, 0.491);
+}
+.video-whats-happening {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0;
+    color: rgba(0, 0, 0, 0.491);
+}
+@media screen and (max-width: 1030px) {
+    .video-player {
+        height: 65vh
+    }
+}
+@media screen and (max-width: 720px) {
+    .video-player {
+        height: 45vh
+    }
+}

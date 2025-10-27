@@ -1,0 +1,121 @@
+.sideNav-main-container {
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.sideNav-options-container {
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6.5vh;
+}
+.sideNav-icons-container {
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+}
+.sideNav-icons {
+    opacity: 0;
+    width:40px;
+    height: 40px;
+    margin-left: 6px;
+    animation-name: sideIconsIntro;
+    animation-duration: 0.5s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+.sideNav-options {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 22px;
+    font-weight: bold;
+    opacity: 0;
+    margin: 0;
+    animation-name: sideIconsIntro;
+    animation-duration: 0.5s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+.sideNav-icons:hover {
+    scale: 1.05;
+    opacity: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.662);
+}
+@keyframes sideIconsIntro {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.sideNav-options:hover {
+    scale: 1.05;
+    opacity: 100%;
+    cursor: pointer;
+    color: rgba(176, 39, 1, 0.756);
+}
+.confetti span {
+  position: absolute;
+  z-index: 0;
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #ffcc00; 
+  top: -25px; 
+  left: 50%;
+  opacity: 0.8;
+  animation: fall linear infinite;
+  border-radius: 3px;
+}
+
+
+.confetti span:nth-child(1) { left: 10%; animation-duration: 5s; animation-delay: 0s; background: #ff6b6b; }
+.confetti span:nth-child(2) { left: 20%; animation-duration: 6s; animation-delay: 1s; background: #feca57; }
+.confetti span:nth-child(3) { left: 30%; animation-duration: 4s; animation-delay: 0.5s; background: #48dbfb; }
+.confetti span:nth-child(4) { left: 40%; animation-duration: 7s; animation-delay: 1.2s; background: #1dd1a1; }
+.confetti span:nth-child(5) { left: 50%; animation-duration: 5.5s; animation-delay: 0.7s; background: #ff9ff3; }
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+
+@media screen and (max-width: 1030px) {
+    .sideNav-options-container {
+        display: none;
+    }
+    .sideNav-main-container {
+        justify-content: center;
+    }
+    .sideNav-icons {
+        position: relative;
+        z-index: 9999;
+    }
+    .sideNav-icons:hover {
+        scale: 1.07;
+        opacity: 100%;
+        cursor: pointer;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.662);
+    }
+}
+@media screen and (max-width: 720px) {
+    .confetti span{
+        top: -20px;
+    }
+}

@@ -1,0 +1,115 @@
+.searchBar-main-container {
+    z-index: 9999;
+    width: 80vw;
+    height: 60px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgba(159, 159, 159, 0.582);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0);
+    animation-name: sbIntro;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes sbIntro {
+    0%{
+        opacity: 0;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0);
+    }
+    100%{
+        opacity: 1;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.578);
+    }
+}
+.logo-web {
+    margin: 0;
+    font-size: 30px;
+    color: rgb(176, 39, 1);
+    opacity: 0;
+    animation-name: sbContIntro;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+.logo-mob {
+    margin: 0;
+    font-size: 30px;
+    color: rgb(176, 39, 1);
+    opacity: 0;
+    animation-name: sbContIntro;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+.icon-container {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.search-input {
+    width: 70%;
+    height: 22.5px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16.5px;
+    background-color: grey;
+    opacity: 0;
+    animation-name: sbContIntro;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes sbContIntro {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.search-input::placeholder {
+    color: rgb(87, 87, 87);
+}
+.search-input:hover {
+    background-color: rgb(181, 181, 181);
+}
+.search-icon {
+    width: 32.5px;
+    height: 32.5px;
+    margin-left: 2.5px;
+    margin-top: 2.5px;
+    opacity: 50%;
+    opacity: 0;
+    animation-name: sbContIntro;
+    animation-delay: 2s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+.notifs-icon {
+    width: 32.5px;
+    height: 32.5px;
+    margin-left: 5px;
+    opacity: 70%;
+    opacity: 0;
+    animation-name: sbContIntro;
+    animation-delay: 2s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+.search-icon:hover, .notifs-icon:hover {
+    cursor: pointer;
+    scale: 1.02;
+    opacity: 100%;
+}
+
+@media screen and (max-width: 1030px) {
+    .icon-container {
+        width: 75%;
+    }
+}

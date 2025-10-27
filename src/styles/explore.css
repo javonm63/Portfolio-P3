@@ -1,0 +1,25 @@
+.explore-main-container {
+    opacity: 0;
+    width: 81.5%;
+    height: 88vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
+    margin-top: 10px;
+    animation-name: homeVidsIntro;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    overflow-x: scroll;
+}
+
+@media screen and (max-width: 1030px) {
+    .explore-main-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 720px) {
+    .explore-main-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
