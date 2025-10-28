@@ -126,14 +126,19 @@ export async function fetchWorldFacts(setCardList, worldf) {
   }
 }
 
-export async function fetchFoodFacts(setCardList, foodf) {
+export async function fetchFoodFacts(setCardList) {
   const API_KEY = "SNqgfaUMNLeJnoqqyNyjbw==jIxIe3qHMQzRCtlK";
   const API_KEY2 = "9JAwGggodiE7NHl8FQ6cs1i6FwfkLbhis4zICykVX0viCTEGv0Ox3cbo";
 
+  const foodf = [
+    'apple', 'banana', 'chicken', 'cheese',
+    'sausage', 'bread', 'cake', 'pizza', 
+    'burger', 'pie', 'cookie', 'fries'
+  ]
   try {
     const foodFacts = await Promise.all(
       foodf.map(async (food) => {
-        const res = await fetch(`https://api.api-ninjas.com/v1/nutrition?query=${food}`, {
+        const res = await fetch(`https://api.api-ninjas.com/v1/nutrition?query=${encodeURIComponent(food)}`, {
           headers: { "X-Api-Key": API_KEY },
         });
         const data = await res.json();
@@ -252,12 +257,14 @@ export async function fetchKindnessFacts(setCardList) {
     console.error("Error fetching kindness facts:", err);
   }
 }
-export async function fetchHistoryFacts(setCardList, years) {
+export async function fetchHistoryFacts(setCardList) {
   const PEXELS_KEY = "9JAwGggodiE7NHl8FQ6cs1i6FwfkLbhis4zICykVX0viCTEGv0Ox3cbo"; 
   const numFacts = 12; 
   const nameArr = []
+  const years = generateRandomYears()
   const API_KEY = "SNqgfaUMNLeJnoqqyNyjbw==jIxIe3qHMQzRCtlK";
 
+  console.log(years)
   try {
     const allEvents = await Promise.all(
       years.map(async (year) => {
@@ -269,6 +276,7 @@ export async function fetchHistoryFacts(setCardList, years) {
       })
     );
 
+    console.log(allEvents)
     const flatEvents = allEvents.flat();
 
     const factsWithImages = await Promise.all(
@@ -356,9 +364,16 @@ export function generateWords(count = 12) {
     kindWords,
   };
 }
+export function generateAnimalWords(count = 12) {
+  const animals = Array.from({ length: count }, () => faker.animal.type());
+
+  return {
+    animals
+  };
+}
 export function generateRandomYears(count = 4) {
   const currentYear = new Date().getFullYear();
-  const earliestYear = -3000; 
+  const earliestYear = 1000; 
   const years = new Set();
 
   while (years.size < count) {

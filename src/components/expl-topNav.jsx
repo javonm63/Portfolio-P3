@@ -30,10 +30,8 @@ function TopNav2({setResizeFacts, setShowSpace, expl, loadMore, setCardList, set
     const now = Date.now();
     const oneDay = 24 * 60 * 60 * 1000;
     const foods = generateWords() 
-    const foodf = foods.foods
-    const ani = foods.countries
-    const worldf = foods.animals
-    const years = generateRandomYears()
+    const worldf = foods.countries
+    const ani = foods.animals
 function getAnimals() {
     if (!cached) {
         fetchAnimalsFacts(setCardList, ani);
@@ -76,7 +74,7 @@ function getAnimals() {
 }; 
 function getFood() {
     if (!cached4) {
-        fetchFoodFacts(setCardList, foodf);
+        fetchFoodFacts(setCardList);
         setAll(false)
         setTrending(false)
         setCartoons(false)
@@ -89,7 +87,7 @@ function getFood() {
     } else {
         const age = now - cached4.savedAt;
         if (age > oneDay) {
-            fetchFoodFacts(setCardList, foodf);
+            fetchFoodFacts(setCardList);
             setAll(false)
             setTrending(false)
             setCartoons(false)
@@ -276,7 +274,7 @@ function getKindness() {
 }
 function getHistory() {
     if (!cached3) {
-        fetchHistoryFacts(setCardList, years);
+        fetchHistoryFacts(setCardList);
         setAll(false)
         setTrending(false)
         setCartoons(false)

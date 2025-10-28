@@ -1,5 +1,5 @@
 export async function fetchCrafts(setCardList) {
-    const API_KEY = process.env.REACT_APP_API_KEY_CRAFTS;
+    const API_KEY = import.meta.env.VITE_NINJA_KEY_ANIMALS;
     const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q=fun-arts-and-crafts-videos-for-kids&maxResults=50&regionCode=US&key=${API_KEY}`;
 
     try {
@@ -31,7 +31,7 @@ export async function fetchCrafts(setCardList) {
 }
 
 export async function fetchVideos(setCardList) {
-    const API_KEY = process.env.REACT_APP_API_KEY_ALL;
+    const API_KEY = import.meta.env.VITE_NINJA_KEY_ANIMALS;
     const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q=fun-videos-for-kids&maxResults=50&regionCode=US&key=${API_KEY}`;
 
     try {
@@ -63,7 +63,7 @@ export async function fetchVideos(setCardList) {
 }
 
 export async function fetchCartoons(setCardList) {
-    const API_KEY = process.env.REACT_APP_API_KEY_CARTOONS;
+    const API_KEY = import.meta.env.VITE_NINJA_KEY_ANIMALS;
     const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q=cartoons-for-kids&maxResults=50&regionCode=US&key=${API_KEY}`;
 
     try {
@@ -92,7 +92,7 @@ export async function fetchCartoons(setCardList) {
     }
 }
 export async function fetchAnimals(setCardList) {
-    const API_KEY = process.env.REACT_APP_API_KEY_CARTOONS;
+    const API_KEY = import.meta.env.VITE_NINJA_KEY_ANIMALS;
     const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q=animal-videos-for-kids&maxResults=50&regionCode=US&key=${API_KEY}`;
 
     try {
@@ -121,7 +121,7 @@ export async function fetchAnimals(setCardList) {
     }
 }
 export async function fetchLearning(setCardList) {
-    const API_KEY = process.env.REACT_APP_API_KEY_LEARNING;
+    const API_KEY = import.meta.env.VITE_NINJA_KEY_ANIMALS;
     const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q=educational-videos-for-kids&maxResults=50&regionCode=US&key=${API_KEY}`;
 
     try {
@@ -150,7 +150,7 @@ export async function fetchLearning(setCardList) {
     }
 }
 export async function fetchSongs(setCardList) {
-    const API_KEY = process.env.REACT_APP_API_KEY_SONGS;
+    const API_KEY = import.meta.env.VITE_NINJA_KEY_ANIMALS;
     const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q=disney-songs&maxResults=50&regionCode=US&key=${API_KEY}`;
 
     try {

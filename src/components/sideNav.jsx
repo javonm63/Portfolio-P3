@@ -1,8 +1,7 @@
 import '../styles/sideNav.css'
-import { fetchAnimalsFacts } from '../services/loadFacts'
+import { fetchAnimalsFacts, generateAnimalWords } from '../services/loadFacts'
 import { getKidsMusic } from '../services/loadTunes'
-import { generateWords } from '../services/loadTranslate'
-import { fetchTranslates } from '../services/loadTranslate'
+import { fetchTranslates, generateWords } from '../services/loadTranslate'
 
 function SideNav({setAll, setGaming, setMeInfo, setCrafts, setTrending, setCartoons, setCardList, setFactsList, setGameList, setTranslateList, setTunesList, setCategory, setWatchVid, pg, setPg, expl, setExpl, myL, setMyL, stories, setStories, later, setLater, tunes, setTunes, games, setGames, me, setMe, sett, setSettings, spotToken}) {
     function goToPg() {
@@ -33,9 +32,9 @@ function SideNav({setAll, setGaming, setMeInfo, setCrafts, setTrending, setCarto
         setSettings(false)
         const cached = JSON.parse(localStorage.getItem('Animal Facts'));
         const now = Date.now();
-        const oneDay = 24 * 60 * 60 * 1000;
-        const foods = generateWords() 
-        const ani = foods.countries
+        const oneDay = 24 * 60 * 60 * 1000
+        const foods = generateAnimalWords()
+        const ani = foods.animals
         if (!cached) {
             fetchAnimalsFacts(setFactsList, ani);
             setAll(true)
