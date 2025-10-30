@@ -289,6 +289,7 @@ function HomePage() {
         localStorage.setItem('Arcade Games', JSON.stringify(arcadeGames))
         localStorage.setItem('Puzzle Games', JSON.stringify(puzzleGames))
         localStorage.setItem('Random Games', JSON.stringify(randomGames))
+        sessionStorage.setItem('Me', JSON.stringify({rname: 'default'}))
     }, [])
 
     const batchIndex = useRef(0);
