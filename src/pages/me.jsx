@@ -185,28 +185,28 @@ function Me({disp, me, pet, stars, compTask, moons, orbs, setOrbs, meInfo, setMe
     function editAvatar(e) {
         const parameter = e.target.value.trim(); 
         const me = JSON.parse(sessionStorage.getItem("Me")) || { rname: "default" };
-        if (me) {
-            const avname = me.rname;
+        if (!me || !me.rname) return;
+        const avname = me.rname;
 
-            if (!parameter) return;
+        if (!parameter) return;
 
-            const [key, val] = parameter.split("=");
+        const [key, val] = parameter.split("=");
 
-            setMyAvatar((prev) => {
-                const baseUrl = new URL(`https://api.dicebear.com/9.x/adventurer/svg?seed=${avname}`);
-                baseUrl.searchParams.set("seed", avname);
+        setMyAvatar((prev) => {
+            const baseUrl = new URL(`https://api.dicebear.com/9.x/adventurer/svg?seed=${avname}`);
+            baseUrl.searchParams.set("seed", avname);
 
-                const saved = JSON.parse(sessionStorage.getItem("AvatarParams")) || {};
-                saved[key] = val; 
-                Object.entries(saved).forEach(([k, v]) => baseUrl.searchParams.set(k, v));
+            const saved = JSON.parse(sessionStorage.getItem("AvatarParams")) || {};
+            saved[key] = val; 
+            Object.entries(saved).forEach(([k, v]) => baseUrl.searchParams.set(k, v));
 
-                sessionStorage.setItem("AvatarParams", JSON.stringify(saved));
+            sessionStorage.setItem("AvatarParams", JSON.stringify(saved));
 
-                const finalUrl = baseUrl.toString();
-                sessionStorage.setItem("Avatar", JSON.stringify({ url: finalUrl }));
-                return finalUrl;
-            });
-        }
+            const finalUrl = baseUrl.toString();
+            sessionStorage.setItem("Avatar", JSON.stringify({ url: finalUrl }));
+            return finalUrl;
+        });
+     
         
     }
     function editAvatar2(e) {
