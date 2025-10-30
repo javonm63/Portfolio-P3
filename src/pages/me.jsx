@@ -212,6 +212,7 @@ function Me({disp, me, pet, stars, compTask, moons, orbs, setOrbs, meInfo, setMe
     function editAvatar2(e) {
         const parameter = e.target.value.trim(); 
         const me = JSON.parse(sessionStorage.getItem("Pet"));
+        if (!me || !me.rname) return;
         const avname = me.rname;
 
         if (!parameter) return;
