@@ -16,7 +16,7 @@ import TopNav4 from '../components/stories-topNav';
 import Stories from '../components/stories';
 import TopNav5 from '../components/tunes-topNav';
 import Tunes from './tunes';
-import Games from './GAMES.JSX';
+import Games from './games.jsx';
 import TopNav6 from '../components/later-topNav';
 import Translate from './translate';
 import TopNav7 from '../components/games-topNav';
