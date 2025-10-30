@@ -1,7 +1,7 @@
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import HomePage from './pages/homepage'
-import Landing from './pages/landing'
+import HomePage from './pages/homepage.jsx'
+import Landing from './pages/landing.jsx'
 
 function App() {
   return (
