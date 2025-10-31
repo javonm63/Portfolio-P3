@@ -6,5 +6,10 @@ import { copyFileSync } from 'fs'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  build: {
+    rollupOptions: {
+      input: '/index.html'
+    }
+  },
     base: './', 
 })
