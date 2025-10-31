@@ -381,7 +381,7 @@ function Me({disp, me, pet, stars, compTask, moons, orbs, setOrbs, meInfo, setMe
             <section className='pet-main-container' style={{display: pet ? 'flex' : 'none'}}>
                 <section className='pet-avatar-container'>
                     <p className='me-card-titles'>BOT AVATAR</p>
-                    <div className='me-avatar-cont' style={{backgroundImage: `url(${petAvatar})`, backgroundSize: 'cover'}}>
+                    <div className='me-avatar-cont' style={{backgroundImage: `url(${petAvatar})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
                         <img className='edit-avatar-icon' src='/edit-icon.png' alt='edit icon image' onClick={() => setEditAv(true)}></img>
                         <div className='edit-avatar-options-cont' style={{display: editAv ? 'flex' : 'none'}}>
                             <button className='exit-button' type='button' onClick={() => setEditAv(false)}>X</button>
