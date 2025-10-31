@@ -5,14 +5,14 @@ import Landing from './pages/landing.jsx'
 
 function App() {
   return (
-    <HashRouter>
+    <Router>
       <div className="page">
         <Routes>
           <Route path="/" element={<Landing />} />       
           <Route path="/home" element={<HomePage />} /> 
         </Routes>
       </div>
-    </HashRouter>
+    </Router>
   )
 }
 
