@@ -11,4 +11,5 @@ export default defineConfig({
         copyFileSync(resolve(__dirname, '_redirects'), resolve(__dirname, 'dist/_redirects'))
       },
     },],
+    base: './', 
 })
