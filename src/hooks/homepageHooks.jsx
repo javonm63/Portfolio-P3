@@ -122,33 +122,38 @@ export function meReflectHooks() {
 }
 
 export function meAboutHooks() {
-    const meData = JSON.parse(sessionStorage.getItem('Me'))
-    if (!meData) return
-    const avname = meData.rname
-    const avatar = {url: `https://api.dicebear.com/9.x/adventurer/svg?seed=${avname}&hairColor=000000&mouth=variant01`}
-    sessionStorage.setItem('Avatar', JSON.stringify(avatar))
-    const petData = JSON.parse(sessionStorage.getItem('Pet'))
-    const petAvData = JSON.parse(sessionStorage.getItem('Bot Avatar'))
-    if (!petAvData) {
-        sessionStorage.setItem('Bot Avatar', JSON.stringify({url: petUrl}))
-    }
-    const petname = petData.rname
-    const petUrl = `https://api.dicebear.com/9.x/bottts-neutral/svg?seed=${petname}`
+    const meData = JSON.parse(sessionStorage.getItem('Me')) || { rname: 'defaultMe' };
+    const petData = JSON.parse(sessionStorage.getItem('Pet')) || { rname: 'defaultPet' };
+    const petAvData = JSON.parse(sessionStorage.getItem('Bot Avatar'));
 
-    const [rname, setRname] = useState('')
-    const [rage, setRage] = useState('')
-    const [rcolor, setRcolor] = useState('')
-    const [rfood, setRfood] = useState('')
-    const [ranimal, setRanimal] = useState('')
-    const [rtalent, setRtalent] = useState('')
-    const [aboutAlert, setAboutAlert] = useState('ENTER DETAILS ABOUT YOU')
-    const [meInfo, setMeInfo] = useState(['NAME', '', 'AGE', '', 'COLOR', '', 'FOOD', '', 'ANIMAL', '', 'TALENT', ''])
-    const [meInputs, setMeInputs] = useState(false)
-    const [myAvatar, setMyAvatar] = useState(avatar.url)
-    const [editAv, setEditAv] = useState(false)
-    const [petAvatar, setPetAvatar] = useState(petAvData.url || petUrl)
-    const [editAv2, setEditAv2] = useState(false)
-    const [botMood, setBotMood] = useState("Beep boop! Calculating happiness level…")
+    const avname = meData.rname;
+    const avatar = {
+        url: `https://api.dicebear.com/9.x/adventurer/svg?seed=${avname}&hairColor=000000&mouth=variant01`
+    };
+    sessionStorage.setItem('Avatar', JSON.stringify(avatar));
+
+    const petname = petData.rname;
+    const petUrl = `https://api.dicebear.com/9.x/bottts-neutral/svg?seed=${petname}`;
+
+    if (!petAvData) {
+        sessionStorage.setItem('Bot Avatar', JSON.stringify({ url: petUrl }));
+    }
+
+    const [rname, setRname] = useState('');
+    const [rage, setRage] = useState('');
+    const [rcolor, setRcolor] = useState('');
+    const [rfood, setRfood] = useState('');
+    const [ranimal, setRanimal] = useState('');
+    const [rtalent, setRtalent] = useState('');
+    const [aboutAlert, setAboutAlert] = useState('ENTER DETAILS ABOUT YOU');
+    const [meInfo, setMeInfo] = useState(['NAME', '', 'AGE', '', 'COLOR', '', 'FOOD', '', 'ANIMAL', '', 'TALENT', '']);
+    const [meInputs, setMeInputs] = useState(false);
+    const [myAvatar, setMyAvatar] = useState(avatar.url);
+    const [editAv, setEditAv] = useState(false);
+    const [petAvatar, setPetAvatar] = useState(petAvData?.url || petUrl);
+    const [editAv2, setEditAv2] = useState(false);
+    const [botMood, setBotMood] = useState("Beep boop! Calculating happiness level…");
+
     return {
         rname, setRname,
         rage, setRage,
@@ -158,13 +163,13 @@ export function meAboutHooks() {
         rtalent, setRtalent,
         aboutAlert, setAboutAlert,
         meInputs, setMeInputs,
-        meInfo, setMeInfo, 
+        meInfo, setMeInfo,
         myAvatar, setMyAvatar,
         editAv, setEditAv,
         petAvatar, setPetAvatar,
         editAv2, setEditAv2,
         botMood, setBotMood
-    }
+    };
 }
 
 export function settingsPageHooks() {
